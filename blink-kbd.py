@@ -70,6 +70,11 @@ def blink(n, state=False):
 
 def dispatcher(word, word_eol, userdata):
     global thread_active
+    global kbd_status
+
+    # surpress any action if the plugin is suspended
+    if False == kbd_status:
+        return
 
     # don't blink the keyboard if we are looking at the client
     w_status = hexchat.get_info("win_status")
@@ -97,7 +102,12 @@ def consume_notification(i, ii):
 
 def notification_checked(word, word_eol, userdata):
     global thread_active
-
+    global kbd_status
+    
+    # surpress any action if the plugin is suspended
+    if False == kbd_status:
+        return
+    
     # this tells that we have seen the notification and turns
     # off the light, however  we need to wait until
     # it finishes blinking, otherwise it will just be an off()
@@ -121,9 +131,9 @@ def toggle_kbd(word, word_eol, userdata):
         kbd_status = True
 
     if kbd_status == True:
-        hexchat.prnt("kbd-notify is now at full speed")
+        hexchat.prnt("kbd-light is now at full speed")
     else:
-        hexchat.prnt("kbd-notify is now suspended")
+        hexchat.prnt("kbd-light is now suspended")
 
 def on_init_cb():
     global status
