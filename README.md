@@ -20,3 +20,21 @@ you shouldn't need to change anything else.
 ##LICENSE - GPLv3 no later option. Ignore any references to later versions
 See LICENSE to know your rights or go to
 http://www.gnu.org/licenses/gpl-3.0.txt
+
+###How to use
+
+Go to your hexchat config directory, if there is a folder named addons enter
+that directory, otherwise, create it and enter it.
+
+git clone http://github.com/dardevelin/blink-kbd
+
+in hexchat, Windows->Plugins and Scripts
+select the button load. It should open your file manager/browser in your
+configuration folder, however if this is not case, worry not, you can simply
+navigate to it, enter the addons folder, the newly created blink-kbd folder
+load blink-kbd.py.
+
+after all of this, make sure your lightcontroler.sh has the appropriate
+permissions to execute and do whatever you told it to do, and that's it.
+
+happy hacking
