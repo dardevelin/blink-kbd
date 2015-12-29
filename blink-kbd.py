@@ -136,7 +136,7 @@ def toggle_kbd(word, word_eol, userdata):
         hexchat.prnt("kbd-light is now suspended")
 
 def on_init_cb():
-    global status
+    global kbd_status
     kbd_status = True
     hexchat.hook_print("Channel Msg Hilight", dispatcher, None, hexchat.PRI_LOWEST)
     hexchat.hook_print("Focus Window", notification_checked, None, hexchat.PRI_LOWEST)
