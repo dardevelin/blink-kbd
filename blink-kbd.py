@@ -25,7 +25,11 @@ from __future__ import print_function
 import os
 from time import sleep
 import hexchat
-import thread
+try:
+    import thread
+except ImportError:
+    # we are probably using python 3 only
+    import _thread as thread
 
 __module_name__ = "kbd notify"
 __module_version__ = "1.1"
