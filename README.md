@@ -16,6 +16,9 @@ _change/replace lightcontroler.sh_ to suit your environment
 and maintain the behavior of **up** to represent _ON_ and **down** for _OFF_
 you shouldn't need to change anything else.
 
+####How it looks like
+[![Blink keyboard backlight](http://img.youtube.com/vi/g1lhRekHyns/0.jpg)](https://www.youtube.com/watch?v=g1lhRekHyns)
+
 
 ##LICENSE - GPLv3 no later option. Ignore any references to later versions
 See LICENSE to know your rights or go to
